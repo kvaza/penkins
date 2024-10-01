@@ -1,15 +1,18 @@
 # penkins
 
 WHAT PENKINS DOES:
+-----------------
 
 	- checks changes in GIT branch and copy/delete modified files via FTP
 	- no web GUI , CLI only, no DB's used
 
 REQUIREMENTS:
+-------------
 
 	PHP 8.2 and above, zip extension should be enabled in php.ini configuration file
 
 HOW TO USE:
+-----------
 
 1. run manager-configuration-add.bat  to create new configuration for your .git branch
 2. run manager-configuration-list.bat and manager-configuration-details.bat to check added configuration
