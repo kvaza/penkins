@@ -1,0 +1,16 @@
+configurations list with 0 items returned
+Nothing found.
+
+.git directory not found on provided path
+.git directory not found on provided path
+Branch is required
+FTP Host is required
+FTP Login is required
+FTP Password is required
+.git directory not found on provided path
+new configuration has been successfully added with name: configuration1
+
+Configuration already exists with name: configuration1
+configurations list with 0 items returned
+Nothing found.
+

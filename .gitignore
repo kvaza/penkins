@@ -1,0 +1,8 @@
+# local docs
+.docs
+
+
+# eclipse pdt files
+.settings
+.project
+.buildpath
