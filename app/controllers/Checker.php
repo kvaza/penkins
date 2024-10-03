@@ -3,7 +3,7 @@
 /**
  * this script will check git branch for changes and create files for deployement
  *
- * @version v.1.0.0 2024-04-0 ks
+ * @version v.1.0.2 2024-04-0 ks
  * @package penkins
  * @example php cli.php  --controller=Deployer --configuration=config1
  */
@@ -61,7 +61,7 @@ class Checker extends CliController
                         $diffs
                         )
                     ),
-                    'file created: '. $file
+                    'file created: '. $this->shortPath($file)
                 ]);
 
                 $archive = $penkins->getArchivePath();
@@ -74,7 +74,7 @@ class Checker extends CliController
 
                 $penkins->createLatestArchive();
 
-                $this->display(['archive with modified files created: '. $archive]);
+                $this->display(['archive with modified files created: '. $this->shortPath($archive)]);
 
                 array_unshift($deployments, $sha1);
                 $penkins->storeDepoyments($deployments);
@@ -90,5 +90,19 @@ class Checker extends CliController
 
             throw new CliException($e->getMessage());
         }
+    }
+
+    /**
+     * leaves only name of file and last leel directory
+     *
+     * @param string $path
+     * @return string
+     */
+    private function shortPath($path)
+    {
+        $parts = preg_split('/[\/\\\]/', $path);
+        $parts = array_slice($parts, -2);
+
+        return join('/', $parts);
     }
 }
