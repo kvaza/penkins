@@ -1,9 +1,9 @@
 @echo off
 
-:: this script copies latest or requested changes on ftp
+:: this script checks changes in GIT branch from selected configuration
 
 echo ------------------------------
-echo check changes in GIT branch from selected configuration
+echo checks changes in GIT branch from selected configuration
 echo ------------------------------
 
 set configuration=configuration1

@@ -3,7 +3,7 @@
 :: this script copies latest or requested changes on ftp
 
 echo ------------------------------
-echo deploys selected or latest deployment file created by GitChecker
+echo deploys selected or latest deployment file created by Checker
 echo ------------------------------
 
 set configuration=configuration1
